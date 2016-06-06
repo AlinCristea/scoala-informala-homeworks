@@ -3,7 +3,8 @@ package ro.sci.tema7;
 public class Main {
 
 	public static void main(String[] args) {
-		Emploee e=new Emploee("alin", 3, false, "inginer");
+		Emploee e=new Emploee("viorel", 3, false, "inginer");
+		
 		Emploee e1=new Emploee("dan", 4, true, "inginer");
 
 		Emploee e2=new Emploee("calin", 2, false, "manager");

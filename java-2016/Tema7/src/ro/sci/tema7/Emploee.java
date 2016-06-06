@@ -19,9 +19,9 @@ public class Emploee implements Comparable<Emploee>{
 
 	
 	@Override
-	public int compareTo(Emploee arg0) {
-		int varstaComp=arg0.varsta;
-		return varstaComp-this.varsta;
+	public int compareTo(Emploee arg1) {
+		int varstaComp=arg1.varsta;
+		return varstaComp=this.varsta;
 	}
 
 
