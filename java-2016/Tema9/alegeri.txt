@@ -1,0 +1,12 @@
+97654335325,aghgd,Boc.
+46789797988,ddgh,Buzoianu.
+56854335325,cvnng,Boc.
+32385685325,nfd,Boc.
+325756878625,fxkhd,Boc.
+325755688725,fhffh,Buzoianu.
+.............
+boc are :4 voturi.
+alexa are :0 voturi.
+Buzoianu  are :2 voturi.
+.............
+total voturi  :6.
