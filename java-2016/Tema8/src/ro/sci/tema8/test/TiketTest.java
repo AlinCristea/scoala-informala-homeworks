@@ -10,16 +10,24 @@ public class TiketTest {
 
 	@Test
 	public void testVenituriPeCategorie() {
-		Ticket t=new Ticket( 100,90);
+		Ticket t = new Ticket(100, 90);
 		
-		t.venituriPeCategorie();
+		int sold3 =( t.getNrBilete() - (t.getNrTicket() * 85 / 100));
+		int sold1 =(t.getNrBilete()-(t.getNrBilete()-t.getNrTicket()*50/100));
+		int sold2=t.getNrBilete()-(sold1+sold3);
 		
-		int soldCategorie3=5;
-		int profitCategoria3 = soldCategorie3 * 120;
-	   
+		 t.venituriPeCategorie();
 		
-		assertEquals(600,profitCategoria3 );
 		
+		int soldCategoria1=sold1*50;
+		int soldCategoria2=sold2*80;
+		int soldCategoria3=sold3*120;
+		
+		int soldTotal =soldCategoria1+soldCategoria2+soldCategoria3;
+		assertEquals(2500,soldCategoria1);
+		assertEquals(600,soldCategoria3);
+		assertEquals(2800,soldCategoria2);
+
 	}
 
 }

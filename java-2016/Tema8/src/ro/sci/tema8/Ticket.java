@@ -86,7 +86,7 @@ public class Ticket {
 		Integer soldCategorie2 = (nrTicket - (nrTicket * 65 / 100)) - ticket.get("categoria 2");
 		Integer soldCategorie3 = (nrTicket - (nrTicket * 85 / 100)) - ticket.get("categoria 3");
 
-		profitCategoria3 = soldCategorie3 * 120;
+		int profitCategoria3 = soldCategorie3 * 120;
 
 		System.out.println("nr bilete vandute categoria 1 : " + soldCategorie1 + " .Price/ticket: " + 50
 				+ " .Valoarea biletelor vandute " + (soldCategorie1 * 50));
@@ -96,8 +96,7 @@ public class Ticket {
 				+ " .Valoarea biletelor vandute " + (soldCategorie3 * 120));
 		System.out.println("Valoarea Totalaa biletelor vandute :"
 				+ ((soldCategorie1 * 50) + (soldCategorie2 * 80) + (soldCategorie3 * 120)));
-		
-		
+
 	}
 
 	/**
@@ -162,7 +161,7 @@ public class Ticket {
 				continue;
 			}
 
-			if ((contorBileteVandute >= nrTicket * 85 / 100)) {
+			if ((contorBileteVandute >= nrTicket * 85 / 100) && (nrBilete <= nrTicket)) {
 
 				int bileteDisponibile = ticket.get("categoria 3");
 				if (nrClient % 17 == 0) {

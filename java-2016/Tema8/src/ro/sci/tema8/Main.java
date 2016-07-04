@@ -3,7 +3,7 @@ package ro.sci.tema8;
 public class Main {
 	public static void main(String args[]) throws CategoryTicketsSoldoutException {
 
-		Ticket t = new Ticket(100, 90);
+		Ticket t = new Ticket(100, 100);
 		while (!t.IsFinished()) {
 			try {
 				t.vindereBilete();
