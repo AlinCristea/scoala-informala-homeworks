@@ -1,6 +1,9 @@
 package ro.sci.tema9;
+
 /**
- * This is Voter class and in this class we create the  voter who  has  cnp ,name ,mayorName
+ * This is Voter class and in this class we create the voter who has cnp ,name
+ * ,mayorName
+ * 
  * @author alin
  *
  */
@@ -13,7 +16,7 @@ public class Voter {
 	public Voter(String cnp, String name, String mayorName) {
 		this.cnp = cnp;
 		this.name = name;
-		this.mayorName =mayorName;
+		this.mayorName = mayorName;
 
 	}
 
@@ -40,9 +43,9 @@ public class Voter {
 	public void setNume(String name) {
 		this.name = name;
 	}
-	public String toString(){
-		return  " "+cnp+","+name+","+mayorName;
+
+	public String toString() {
+		return " " + cnp + "," + name + "," + mayorName;
 	}
 
-	
 }

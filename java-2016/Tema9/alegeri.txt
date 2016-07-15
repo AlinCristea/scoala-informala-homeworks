@@ -5,8 +5,9 @@
 325756878625,fxkhd,Boc.
 325755688725,fhffh,Buzoianu.
 .............
-boc are :4 voturi.
-alexa are :0 voturi.
-Buzoianu  are :2 voturi.
+boc has :4 votes.
+alexa has :0 votes.
+Buzoianu  has :2 votes.
 .............
+Boc is mayor and get  :66% from total votes.
 total voturi  :6.

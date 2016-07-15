@@ -5,37 +5,36 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class Main {
-	public static void readFromFile(){
+	public static void readFromFile() {
 		try {
 			ReadFile readFile = new ReadFile();
 
-	readFile.readFileContent();
+			readFile.readFileContent();
 
 		} catch (Exception e) {
-		System.out.println(e.getMessage());
+			System.out.println(e.getMessage());
 		}
-		
+
 	}
 
 	public static void main(String[] args) {
 		ReadFile fileRead = new ReadFile();
-		
-		   try {
+
+		try {
 			fileRead.readFileContent();
 		} catch (FileNotFoundException e) {
-			
+
 			e.printStackTrace();
 		} catch (IOException e) {
-			
+
 			e.printStackTrace();
 		}
-		
-			System.out.println("............");
-			System.out.println("............");
-			System.out.println("............");
 
+		System.out.println("............");
+		System.out.println("............");
+		System.out.println("............");
 
-		BirouElectoral bir = new BirouElectoral();
+		ManageVotes mng = new ManageVotes();
 
 		Voter a1 = new Voter("32354335325", "alin", "Boc");
 		Voter a2 = new Voter("24532646443", "dani ", "Boc");
@@ -49,43 +48,43 @@ public class Main {
 		Voter a10 = new Voter("32354335325", "alin", "Boc");
 		Voter a11 = new Voter("24532646443", "dani ", "Boc");
 		Voter a12 = new Voter("43654756455", "numedgt", "Alexa");
-		
-	
-		bir.addAlegator(a1);
-		bir.addAlegator(a2);
-		bir.addAlegator(a3);
-		bir.addAlegator(a4);
-		bir.addAlegator(a5);
-		bir.addAlegator(a6);
-		bir.addAlegator(a7);
-		bir.addAlegator(a8);
-		bir.addAlegator(a9);
-		bir.addAlegator(a10);
-		bir.addAlegator(a11);
-		bir.addAlegator(a12);
-		
-		bir.list();
-		
-		bir.invalidVotes();
-		bir.deliteInvalidVotes();
+
+		mng.addVoter(a1);
+		mng.addVoter(a2);
+		mng.addVoter(a3);
+		mng.addVoter(a4);
+		mng.addVoter(a5);
+		mng.addVoter(a6);
+		mng.addVoter(a7);
+		mng.addVoter(a8);
+		mng.addVoter(a9);
+		mng.addVoter(a10);
+		mng.addVoter(a11);
+		mng.addVoter(a12);
+
+		mng.list();
+
+		mng.invalidVotes();
+		mng.deliteInvalidVotes();
 		System.out.println("............");
-		bir.list();
+		mng.list();
 		CreateFile file = new CreateFile();
 		file.openFile();
-		file.writeElector(bir.getList());
+		file.writeElector(mng.getList());
 
 		file.writeString("............");
 
-		file.writeString("boc are :" + bir.getVotMayer("Boc") + " voturi");
+		file.writeString("boc has :" + mng.getVotMayer("Boc") + " votes");
 
-		file.writeString("alexa are :" + bir.getVotMayer("Alexa") + " voturi");
+		file.writeString("alexa has :" + mng.getVotMayer("Alexa") + " votes");
 
-		file.writeString("Buzoianu  are :" + bir. getVotMayer("Buzoianu") + " voturi");
+		file.writeString("Buzoianu  has :" + mng.getVotMayer("Buzoianu") + " votes");
 		file.writeString("............");
+		file.writeString( mng.validationMayor(null));
 
-		file.writeString("total voturi  :" + bir.returnTotalVot());
+		file.writeString("total voturi  :" + mng.returnTotalVot());
 		
-file.closeFile();
-
+		file.closeFile();
+		
 	}
 }

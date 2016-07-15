@@ -7,9 +7,11 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.Charset;
+
 /**
- * This is  ReadFile class which helps me to read from the file 
- * the close() method is used to close the file  
+ * This is ReadFile class which helps me to read from the file the close()
+ * method is used to close the file
+ * 
  * @author alin
  *
  */
@@ -22,12 +24,12 @@ public class ReadFile {
 			while ((line = br.readLine()) != null) {
 				System.out.println(line);
 			}
-			
+
 			fis.close();
 			isr.close();
 			br.close();
 		}
-		
+
 	}
 
 }
