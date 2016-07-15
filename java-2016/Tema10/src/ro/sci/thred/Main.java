@@ -12,7 +12,7 @@ public class Main {
 		System.out.println("............");
 		System.out.println("............");
 
-		ManageVotes bir = new ManageVotes();
+		ManageVotes mng = new ManageVotes();
 
 		Voter a1 = new Voter("32354335325", "alin", "Boc");
 		Voter a2 = new Voter("24532646443", "dani ", "Boc");
@@ -41,7 +41,7 @@ public class Main {
 		thredList.add(a11);
 		thredList.add(a12);
 
-		MyThred m = new MyThred(bir);
+		MyThred m = new MyThred(mng);
 		try {
 			m.startThred(thredList);
 		} catch (InterruptedException e) {
